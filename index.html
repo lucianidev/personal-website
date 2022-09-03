@@ -18,123 +18,95 @@
     <meta name="reply-to" content="lucianidev@gmail.com" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
-    <script src="https://unpkg.com/vue@3"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Crimson+Text&family=Poppins&family=Work+Sans&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" href="./styles/style.css">
     <title>jacopo luciani</title>
 </head>
 
+
 <body>
     <nav>
-        <ul id="links">
-            <li class="link-icon"><a href="#about"><img src="./images/me.png"
-                        alt="image of an avatar rapresenting the about section"></a></li>
-            <li class="link-icon"><a href="#portfolio"><img src="./images/briefcase.png"
-                        alt="image of briefcase for showing my portfolio"></a></li>
-            <li class="link-icon"><a href="#skils"><img src="./images/skills.png"
-                        alt="image of a phone book icon showing my contacts"></a></li>
-            <li class="link-icon"><a href="#contacts"><img src="./images/contacts.png"
-                        alt="image of a email icon showing my contacts"></a></li>
+
+        <div id="hamburger">
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
+        </div>
+
+        <ul class="links">
+            <li class="link small-text"><a href="#home">Home</a></li>
+            <li class="link small-text"><a href="#about">Chi sono</a></li>
+            <li class="link small-text"><a href="#contacts">Contatti</a></li>
         </ul>
     </nav>
 
-    <article>
-        <div id="home" class="section">
-            <div id="presentation">
-                <h1 class="heading">
-
-                </h1>
-
-                <p id="under-text">
-                    web developer
-                </p>
-
-                <div id="play-menu">
-                        <button class="button" id="about-button"><a class="link" href="#about">About me</a></button>
-                </div>
-            </div>
+    <section id="home" class="full-viewport flex two-columns-disposed-layout">
+        <div class="personal">
+            <img class="personal-image" src="./images/personal_image.webp" alt="">
         </div>
 
-        <div class="section" id="about">
+        <div class="description">
+            <h1 class="giant-text">Jacopo Luciani</h1>
+            <p class="medium-text serif vertical-space">
+                web developer
+            </p>
 
-            <img src="./images/smile.png" alt="a smile drawed in pixel art style">
+            <a class="small-text serif" href="">
+                <button class="button">
+                    Chi sono?
+                </button>
+            </a>
+        </div>
+    </section>
 
-            <div id="about-description">
-                <h1 class="big-text" id="greetings"></h1>
-                <p class="medium-text">
-                    I'm a junior web developer from Italy, <br />
-                    Here there are some of my <a id="project-link" href="#portfolio">projects</a>
-                </p>
+    <section id="about" class="">
+        <h2 class="big-text">Chi sono?</h2>
+
+        <div class="flex two-columns-disposed-layout">
+            <div class="personal">
+                <img class="personal-image" src="https://placekitten.com/200/300" alt="">
             </div>
 
-        </div>
-    </article>
+            <div class="description lateral-space vertical-space">
+                <h2 class="big-text">
+                    Ciao <br> Sono Jacopo Luciani &#128075
+                </h2>
 
-    <div class="section" id="portfolio">
-        <h1 class="big-text">Portfolio</h1>
+                <ul class="small-text vertical-space">
+                    <li>Nazionalità : Italia</li>
+                    <li>Età : 14</li>
+                    <li>Scuola : Itis Lucarelli</li>
+                    <li class="vertical-space">skills:</li>
+                    <li id="skills" class="vertical-space">
+                        <ul id="skills" class="vertical-space">
+                            <li class="lateral-space">
+                                <svg class="icon-skills" width="32" height="32" viewBox="0 0 128 128">
+                                    <path fill="#42b883"
+                                        d="M78.8,10L64,35.4L49.2,10H0l64,110l64-110C128,10,78.8,10,78.8,10z"></path>
+                                    <path fill="#35495e" d="M78.8,10L64,35.4L49.2,10H25.6L64,76l38.4-66H78.8z"></path>
+                                </svg>
+                            </li>
 
-        <div id="github-projects">
-            <div class="project" v-for="(project, index) in portfolioData" :key="project.id">
-                <h1 class="project-name"><a class="project-name" :href="project.html_url">{{ project.name }}</a></h1>
-                <p class="project-description">
-                    {{ project.description }}
-                </p>
+                            <li class="lateral-space vertical-space">
 
+                                <img class="icon-skills" src="./images/html-5.png" alt="">
+                            </li>
 
-                <button class="project-visit"><a rel="preconnect" class="project-link" :href="project.html_url">Check project</a></button>
+                            <li class="lateral-space vertical-space">
+                                <img class="icon-skills" src="./images/css-3.png" alt="">
+                            </li>
+
+                            <li class="lateral-space vertical-space">
+                                <img class="icon-skills" src="./images/js.png" alt="">
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
             </div>
         </div>
-    </div>
-
-    <div class="section" id="skils">
-        <h1 class="big-text">skills</h1>
-
-        <ul class="list" id="skils-board">
-            <li class="list-item">
-                <h1>HTML</h1>
-                <h1>10000xp</h1>
-            </li>
-
-            <li class="list-item">
-                <h1>CSS</h1>
-                <h1>9000xp</h1>
-            </li>
-
-            <li class="list-item">
-                <h1>JS</h1>
-                <h1>10000xp</h1>
-            </li>
-
-            <li class="list-item">
-                <h1>VUE</h1>
-                <h1>8000xp</h1>
-            </li>
-        </ul>
-    </div>
-
-    <div class="section" id="contacts">
-        <h1 class="big-text">Contacts</h1>
-
-        <ul class="list">
-            <li class="list-item contact-information">
-                <span class="contact">Email: </span>
-                <span>lucianidev@gmail.com</span>
-            </li>
-
-            <li class="list-item contact-information">
-                <span class="contact">Phone: </span>
-                <span>+39 334 801 1984</span>
-            </li>
-
-            <li class="list-item contact-information">
-                <span class="contact">Github:</span>
-                <span><a id="github-link" href="https://github.com/pizzacode-byte">pizzacode-byte</a></span>
-            </li>
-        </ul>
-    </div>
-
-
-    <script defer src="./bundle/script.js"></script>
+    </section>
+    <script src="./src/toggleNav.js"></script>
 </body>
 
 </html>

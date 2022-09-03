@@ -1,220 +1,236 @@
-.section,nav{
-    justify-content: center;
-}
-#links,nav{
-    display:flex
-}
-#home,body{
-    text-align:center;
-    background:#e52521
-}
-#about-button,.project-visit,body{
-    font-family:'Press Start 2P',cursive
-}
-.link,.project-link,.project-name{
-    text-decoration:none
-}
-#skils-board{
-    margin:50px 0;
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-    gap: 1rem;
-}
-.link-icon,.list{
-    list-style-type:none
-}
-html{
-    scroll-behavior:smooth
-}
 *{
-    box-sizing:border-box;
-    padding:0;
-    margin:0
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    scroll-behavior: smooth;
 }
-body{
-    letter-spacing:3px;
-    overflow-x: hidden;
+
+:root{
+    --dark-text-color : #000;
+    --ligth-color : #FFF;
+    --blue-background-color : rgb(7, 87, 121);
+    --navbar-color : rgb(147, 162, 237);
+    --yellow-text-color : rgba(240, 215, 18, 0.885);
 }
-nav{
-    align-items:center;
-    background:#ffd987;
-    position:fixed;
-    width:100%;
-    top:0;
-    z-index:2
+
+
+/* COMMONS */
+
+
+body {
+    background: var(--blue-background-color);
+    font-family: 'Work Sans', sans-serif;
+    overflow: hidden none;
+    color: var(--yellow-text-color);
 }
-#links{
-    justify-content:space-between
+
+img {
+    height: 100%;
+    width: 100%;
+    object-fit: contain;
 }
-#portfolio,.section{
-    flex-direction:column;
-    display:flex
+
+.full-viewport {
+    height: 100vh;
 }
-.link-icon{
-    transition:.5s;
-    margin:0 5px;
-    padding:10px
+
+.giant-text {
+    font-size: 4rem; /* per i testi che si trovano nella home */
 }
-.link-icon:hover{
-    background:#f76ee73b
+
+.big-text {
+    font-size: 2.5rem; /* per gli headings come i titoli */
 }
-.section{
-    align-items:center;
-    height:100vh
+
+.medium-text {
+    font-size: 2rem;  /* per le descrizioni */
 }
-#home{
-    font-size:4vw;
-    color:#fff;
+
+.small-text {
+    font-size: 1.2rem; /* per informazioni poco importanti+ */
 }
-#presentation{
-    animation:1s fade-in;
-    -o-animation:1s fade-in;
-    -moz-animation:1s fade-in;
-    -webkit-animation:1s fade-in
+
+.extra-small-text {
+    font-size: .75rem;  /* per link dentro i bottoni*/
 }
-#under-text{
-    font-size:2.5vw;
-    margin:10px 0
+
+.button {
+    padding: 10px 30px;
+    background: transparent;
+    border-radius: 30px;
+    border: #FFF 2px solid;
+    color: var(--light-color);
+    font-family: 'Work Sans', sans-serif;
 }
-.button{
-    padding:10px 30px;
-    transition:.3s;
-    margin: 20px 0;
+
+a {
+    color: var(--ligth-color);
+    text-decoration: none;
 }
-#play-menu{
-    display:flex;
-    justify-content:center;
-    align-items:center
+
+.serif {
+    font-family: 'Crimson Text', serif;
 }
-#portfolio,#skils{
-    justify-content:flex-start;
-    height:auto
+
+.vertical-space {
+    margin: .75rem 0;
 }
-#about-button{
-    background:0;
-    border:4px solid #000;
-    font-size:2.7vw;
-    border-radius:36px
+
+.lateral-space {
+    margin: 0 .75rem;
 }
-.link{
-    color:#000
-}
-#about,#contacts,#github-link,#portfolio,#project-link,#skils{
-    color:#fff
-}
-#about-button:hover{
-    background:#fff
-}
-#about-description{
-    margin:40px 0;
-    line-height:3vh
-}
-.medium-text{
-    font-size:2vh;
-    animation:1s fade-in;
-    -o-animation:1s fade-in;
-    -moz-animation:1s fade-in;
-    -webkit-animation:1s fade-in;
-    margin:40px 0
-}
-.big-text{
-    margin:40px 0;
-    font-size:3.5vh
-}
-#github-projects{
-    display:grid;
-    grid-template-columns: 1fr 1fr;
-    gap:6rem
-}
-.project{
-    display:flex;
-    flex-direction:column;
-    align-items:flex-start;
-    justify-content:space-around;
-    text-align:left;
-    line-height:3vh;
-    padding: 14px;
-}
-.project-name{
-    font-size:2rem;
-    line-height:6vh;
-    text-transform:uppercase;
-    color:#fff
-}
-.project-description{
-    font-size:2vh;
-    margin:20px 0
-}
-.project-visit{
-    padding:10px 20px;
-    border:0;
-    border-radius:36px
-}
-.project-link{
-    color:#000;
-    font-size:1rem
-}
-#skils{
-    font-size:.75rem;
-    margin: 20px 0;
-    line-height: 55px;
-}
-.list-item{
+
+.flex {
     display: flex;
-    flex-direction: column;
-    font-size:1rem;
-    margin:30px 0
 }
 
-#contacts{
-    height:auto;
-}
-.contact-information{
-    display:flex;
-    justify-content:center;
-    align-items:center;
+.two-columns-disposed-layout { /* elements are set on two colums and equally distanciated */
     flex-direction: row;
-    margin:20px 0;
-    font-size: 1rem;
+    align-items: center;
+    justify-content: space-around;
 }
 
-.contact{
-    margin: 10px 0;
-}
-@keyframes fade-in{
-    from{
-        opacity:0
-    }
-    to{
-        opacity:1
-    }
+li {
+    list-style-type: none;
 }
 
+/* NAVBAR */
 
-@media screen and (max-width :1179px){
-    #github-projects{
-        grid-template-columns: 1fr;
+nav{
+    position: sticky;
+    position: -webkit-sticky;
+    top: 0;
+    z-index: 2;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    padding: 22px;
+    background: var(--navbar-color);
+}
+
+.links{
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+}
+
+.link {
+    margin: 0 1.2rem 0 0;
+    text-align: center;
+}
+
+.link a{
+    text-decoration: none;
+    color: var(--ligth-color);
+}
+
+#hamburger{
+    position: absolute;
+    top: .75rem;
+    right: 1.4rem;
+    display: none;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    width: 26px;
+    height: 21px;
+}
+
+.bar{
+    height: 3px;
+    width: 100%;
+    background-color: var(--ligth-color);
+    border-radius: 150px;
+}
+
+/* HOME */
+
+.personal {
+    height: 500px;
+    width: 500px;
+}
+
+.description {
+    text-align: left;
+    color: var(--yellow-text-color);
+}
+
+/* ABOUT */
+
+#about {
+    text-align: center;
+}
+
+#skills {
+    display: flex;
+}
+
+
+.icon-skills {
+    background: var(--ligth-color);
+    border-radius: 360px;
+    padding: 10px 30px;
+    box-sizing: content-box;
+    width: 32px;
+    height: 32px;
+}
+
+@media only screen and (max-width: 600px) {
+
+    .links {
+        display: none;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: column;
+                flex-direction: column;
+        margin: 1.2rem 0 0 0;
+        width: 100%;
     }
 
-    .project-name{
-        font-size:5vw
+    .link{
+        padding: 10px;
+        width: 100%;
     }
 
-    .project-description{
-        font-size: 3vw;
-        line-height: 3.6vh
+    #hamburger {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
     }
 
-    #skils-board {
-        grid-template-columns: 1fr;
+    .active{
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
     }
 
-    .contact-information{
+    .two-columns-disposed-layout {
         flex-direction: column;
     }
 
-    .contact-information{
-        font-size: 3.5vw;
+    .personal {
+        width: 100%;
+        height: auto;
+    }
+
+    #skills {
+        flex-direction: column;
     }
 }
-
