@@ -41,10 +41,7 @@
         </ul>
     </nav>
 
-    <section id="home" class="full-viewport flex two-columns-disposed-layout">
-        <div class="personal">
-            <img class="personal-image" src="./images/personal_image.webp" alt="">
-        </div>
+    <section id="home" class="full-viewport flex  lateral-space">
 
         <div class="description">
             <h1 class="giant-text">Jacopo Luciani</h1>
@@ -52,7 +49,7 @@
                 web developer
             </p>
 
-            <a class="small-text serif" href="">
+            <a class="small-text serif" href="#about">
                 <button class="button">
                     Chi sono?
                 </button>
@@ -60,17 +57,17 @@
         </div>
     </section>
 
-    <section id="about" class="">
+    <section id="about" class="vertical-space lateral-space center-text">
         <h2 class="big-text">Chi sono?</h2>
 
         <div class="flex two-columns-disposed-layout">
             <div class="personal">
-                <img class="personal-image" src="https://placekitten.com/200/300" alt="">
+                <img class="personal-image" loading="lazy" src="./images/me-with-books.webp" alt="">
             </div>
 
-            <div class="description lateral-space vertical-space">
-                <h2 class="big-text">
-                    Ciao <br> Sono Jacopo Luciani &#128075
+            <div class="description  vertical-space">
+                <h2 class="big-text vertical-space">
+                    Ciao, <br> Sono Jacopo Luciani <span id="hand">&#128075</span>
                 </h2>
 
                 <ul class="small-text vertical-space">
@@ -80,30 +77,59 @@
                     <li class="vertical-space">skills:</li>
                     <li id="skills" class="vertical-space">
                         <ul id="skills" class="vertical-space">
-                            <li class="lateral-space">
+                            <li class="lateral-space vertical-space">
                                 <svg class="icon-skills" width="32" height="32" viewBox="0 0 128 128">
                                     <path fill="#42b883"
                                         d="M78.8,10L64,35.4L49.2,10H0l64,110l64-110C128,10,78.8,10,78.8,10z"></path>
                                     <path fill="#35495e" d="M78.8,10L64,35.4L49.2,10H25.6L64,76l38.4-66H78.8z"></path>
                                 </svg>
+                                <div>Vue</div>
                             </li>
 
                             <li class="lateral-space vertical-space">
-
-                                <img class="icon-skills" src="./images/html-5.png" alt="">
+                                <img loading="lazy" class="icon-skills" src="./images/html-5.png" alt="">
+                                <div>Html</div>
                             </li>
 
                             <li class="lateral-space vertical-space">
-                                <img class="icon-skills" src="./images/css-3.png" alt="">
+                                <img loading="lazy" class="icon-skills" src="./images/css-3.png" alt="">
+                                <div>Css</div>
                             </li>
 
                             <li class="lateral-space vertical-space">
-                                <img class="icon-skills" src="./images/js.png" alt="">
+                                <img loading="lazy" class="icon-skills" src="./images/js.png" alt="">
+                                <div>Javascript</div>
                             </li>
                         </ul>
                     </li>
                 </ul>
             </div>
+        </div>
+    </section>
+
+    <section id="contacts" class="vertical-space center-text">
+        <h2 class="big-text">
+            Contatti
+        </h2>
+
+        <div class="vertical-space">
+            <span class="contact lateral-space">
+                <a href=" https://github.com/pizzacode-byte" target="_blank">
+                    Github
+                </a>
+            </span>
+
+            <span class="contact lateral-space">
+                <a href="tel:334-801-1984">
+                    Phone
+                </a>
+            </span>
+
+            <span class="contact lateral-space">
+                <a href="mailto:lucianidev@gmail.com">
+                    Email
+                </a>
+            </span>
         </div>
     </section>
     <script src="./src/toggleNav.js"></script>

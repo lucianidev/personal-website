@@ -36,7 +36,7 @@ img {
 }
 
 .giant-text {
-    font-size: 4rem; /* per i testi che si trovano nella home */
+    font-size: 6rem; /* per i testi che si trovano nella home */
 }
 
 .big-text {
@@ -85,6 +85,10 @@ a {
     display: flex;
 }
 
+.center-text {
+    text-align: center;
+}
+
 .two-columns-disposed-layout { /* elements are set on two colums and equally distanciated */
     flex-direction: row;
     align-items: center;
@@ -94,6 +98,7 @@ a {
 li {
     list-style-type: none;
 }
+
 
 /* NAVBAR */
 
@@ -132,11 +137,6 @@ nav{
     text-align: center;
 }
 
-.link a{
-    text-decoration: none;
-    color: var(--ligth-color);
-}
-
 #hamburger{
     position: absolute;
     top: .75rem;
@@ -162,6 +162,11 @@ nav{
 
 /* HOME */
 
+#home {
+    justify-content: center;
+    align-items: center;
+}
+
 .personal {
     height: 500px;
     width: 500px;
@@ -174,14 +179,15 @@ nav{
 
 /* ABOUT */
 
-#about {
-    text-align: center;
+#hand {
+    animation: saluting 0.6s alternate-reverse 1s infinite;
+    display: inline-block;
 }
 
 #skills {
     display: flex;
+    text-align: center;
 }
-
 
 .icon-skills {
     background: var(--ligth-color);
@@ -190,9 +196,35 @@ nav{
     box-sizing: content-box;
     width: 32px;
     height: 32px;
+    border: 3px solid var(--ligth-color);
 }
 
-@media only screen and (max-width: 600px) {
+.icon-skills:hover {
+    background: transparent;
+    transition: all 0.6s;
+}
+
+/* PORTFOLIO */
+
+#projects {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.work {
+    width: 300px;
+    height: auto;
+}
+
+/* CONTACT */
+
+.contact {
+    width: 32px;
+    height: auto;
+    text-decoration: underline;
+}
+
+@media only screen and (max-width: 991px) {
 
     .links {
         display: none;
@@ -231,6 +263,17 @@ nav{
     }
 
     #skills {
-        flex-direction: column;
+        flex-wrap: wrap;
+    }
+}
+
+
+@keyframes saluting {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(-15deg);
     }
 }
