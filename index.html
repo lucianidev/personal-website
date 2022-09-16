@@ -35,103 +35,99 @@
         </div>
 
         <ul class="links">
-            <li class="link small-text"><a href="#home">Home</a></li>
-            <li class="link small-text"><a href="#about">Chi sono</a></li>
-            <li class="link small-text"><a href="#contacts">Contatti</a></li>
+            <li class="small-text"><a href="#home">Home</a></li>
+            <li class="small-text"><a href="#about">Chi sono</a></li>
+            <li class="small-text"><a href="#contacts">Contatti</a></li>
         </ul>
     </nav>
 
-    <section id="home" class="full-viewport flex  lateral-space">
+    <section id="home" class="full-viewport flex center home lateral-space">
+        <h1 class="giant-text">Jacopo Luciani</h1>
+        <p class="medium-text serif vertical-space">
+            web developer
+        </p>
 
-        <div class="description">
-            <h1 class="giant-text">Jacopo Luciani</h1>
-            <p class="medium-text serif vertical-space">
-                web developer
-            </p>
-
-            <a class="small-text serif" href="#about">
-                <button class="button">
-                    Chi sono?
-                </button>
-            </a>
-        </div>
+        <a class="small-text serif" href="#about">
+            <button class="button">
+                Chi sono?
+            </button>
+        </a>
     </section>
 
-    <section id="about" class="vertical-space lateral-space center-text">
-        <h2 class="big-text">Chi sono?</h2>
+    <section id="about" class="about full-viewport vertical-space center-text">
+        <h2 class="big-text vertical-space">Chi sono?</h2>
 
         <div class="flex two-columns-disposed-layout">
-            <div class="personal">
-                <img class="personal-image" loading="lazy" src="./images/me-with-books.webp" alt="">
-            </div>
+            <img width="500" height="500" class="personal-image" src="./images/foto-personale.webp" alt="an image of myself during the sunset">
 
-            <div class="description  vertical-space">
-                <h2 class="big-text vertical-space">
-                    Ciao, <br> Sono Jacopo Luciani <span id="hand">&#128075</span>
-                </h2>
+            <ul class="presentation small-text vertical-space lateral-space">
+                <li>
+                    <h2 class="big-text vertical-space">
+                        Ciao, <br> Sono Jacopo Luciani <span class="hand">&#128075</span>
+                    </h2>
+                </li>
+                <li><b>Città</b> : Benevento</li>
+                <li><b>Età</b> : 14</li>
+                <li><b>Scuola</b> : Itis Lucarelli</li>
+                <li class="vertical-space"><b>skills:</b></li>
+                <li>
+                    <ul class="skills flex vertical-space">
+                        <li class="lateral-space vertical-space">
+                            <svg class="icon-skills" width="32" height="32" viewBox="0 0 128 128">
+                                <path fill="#42b883"
+                                    d="M78.8,10L64,35.4L49.2,10H0l64,110l64-110C128,10,78.8,10,78.8,10z"></path>
+                                <path fill="#35495e" d="M78.8,10L64,35.4L49.2,10H25.6L64,76l38.4-66H78.8z"></path>
+                            </svg>
+                            <div>Vue</div>
+                        </li>
 
-                <ul class="small-text vertical-space">
-                    <li>Nazionalità : Italia</li>
-                    <li>Età : 14</li>
-                    <li>Scuola : Itis Lucarelli</li>
-                    <li class="vertical-space">skills:</li>
-                    <li id="skills" class="vertical-space">
-                        <ul id="skills" class="vertical-space">
-                            <li class="lateral-space vertical-space">
-                                <svg class="icon-skills" width="32" height="32" viewBox="0 0 128 128">
-                                    <path fill="#42b883"
-                                        d="M78.8,10L64,35.4L49.2,10H0l64,110l64-110C128,10,78.8,10,78.8,10z"></path>
-                                    <path fill="#35495e" d="M78.8,10L64,35.4L49.2,10H25.6L64,76l38.4-66H78.8z"></path>
-                                </svg>
-                                <div>Vue</div>
-                            </li>
+                        <li class="lateral-space vertical-space">
+                            <img loading="lazy" class="icon-skills" src="./images/html-5.png" alt="html icon">
+                            <div>Html</div>
+                        </li>
 
-                            <li class="lateral-space vertical-space">
-                                <img loading="lazy" class="icon-skills" src="./images/html-5.png" alt="">
-                                <div>Html</div>
-                            </li>
+                        <li class="lateral-space vertical-space">
+                            <img loading="lazy" class="icon-skills" src="./images/css-3.png" alt="css icon">
+                            <div>Css</div>
+                        </li>
 
-                            <li class="lateral-space vertical-space">
-                                <img loading="lazy" class="icon-skills" src="./images/css-3.png" alt="">
-                                <div>Css</div>
-                            </li>
+                        <li class="lateral-space vertical-space">
+                            <img loading="lazy" class="icon-skills" src="./images/js.png" alt="javascript icon">
+                            <div>Javascript</div>
+                        </li>
+                    </ul>
+                </li>
 
-                            <li class="lateral-space vertical-space">
-                                <img loading="lazy" class="icon-skills" src="./images/js.png" alt="">
-                                <div>Javascript</div>
-                            </li>
-                        </ul>
-                    </li>
-                </ul>
-            </div>
+                <li id="contacts">
+                    <h2 class="medium-text">
+                        Contatti:
+                    </h2>
+            
+                        <span class="contact lateral-space vertical-space">
+                            <a href="https://github.com/lucianidev" target="_blank">
+                                Github
+                            </a>
+                        </span>
+            
+                        <span class="contact lateral-space vertical-space">
+                            <a href="tel:334-801-1984">
+                                Phone
+                            </a>
+                        </span>
+            
+                        <span class="contact lateral-space vertical-space">
+                            <a href="mailto:lucianidev@gmail.com">
+                                Email
+                            </a>
+                        </span>
+                </li>
+            </ul>
         </div>
+
+
     </section>
 
-    <section id="contacts" class="vertical-space center-text">
-        <h2 class="big-text">
-            Contatti
-        </h2>
 
-        <div class="vertical-space">
-            <span class="contact lateral-space">
-                <a href=" https://github.com/pizzacode-byte" target="_blank">
-                    Github
-                </a>
-            </span>
-
-            <span class="contact lateral-space">
-                <a href="tel:334-801-1984">
-                    Phone
-                </a>
-            </span>
-
-            <span class="contact lateral-space">
-                <a href="mailto:lucianidev@gmail.com">
-                    Email
-                </a>
-            </span>
-        </div>
-    </section>
     <script src="./src/toggleNav.js"></script>
 </body>
 
