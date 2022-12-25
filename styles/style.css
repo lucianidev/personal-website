@@ -26,10 +26,18 @@ body {
 
 img {
     max-width:100%;
-    -o-object-fit: scale-down;
-       object-fit: scale-down;
+    -o-object-fit: contain;
+       object-fit: contain;
 }
 
+.poppins {
+    font-family: 'Poppins', sans-serif;
+}
+
+#canvas {
+    position: fixed;
+    z-index: -1;
+}
 
 .full-viewport {
     height: 100vh;
@@ -44,7 +52,7 @@ img {
 }
 
 .medium-text {
-    font-size: 2rem;  /* per le descrizioni */
+    font-size: 1.5rem;  /* per le descrizioni */
 }
 
 .small-text {
@@ -64,13 +72,10 @@ img {
     font-family: 'Work Sans', sans-serif;
 }
 
+
 a {
     color: var(--ligth-color);
     text-decoration: none;
-}
-
-.serif {
-    font-family: 'Crimson Text', serif;
 }
 
 .vertical-space {
@@ -81,10 +86,27 @@ a {
     margin: 0 .75rem;
 }
 
+.space {
+    margin: .75rem;
+}
+
 .flex {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+}
+
+.flex-center {
+    align-items: center;
+    justify-content: center;
+}
+
+.wrap {
+    flex-wrap: wrap;
+}
+
+.grid {
+    display: grid;
 }
 
 .center-text {
@@ -94,6 +116,7 @@ a {
 .two-columns-disposed-layout { /* elements are set on two colums and equally distanciated */
     display: grid;
     grid-template-columns: 1fr 1fr;
+    gap: 1rem;
 }
 
 .center {
@@ -106,7 +129,7 @@ li {
 
 button:hover  {
     background: var(--ligth-color);
-    color: var(--dark-color) !important; 
+    color: var(--dark-color);
     -webkit-transition: all 1s; 
     -o-transition: all 1s; 
     transition: all 1s;
@@ -114,6 +137,15 @@ button:hover  {
 
 a:hover {
     color: var(--link-hover);
+}
+
+.button-link {
+    color: inherit;
+    z-index: 2;
+}
+
+.button-link:hover {
+    color: var(--dark-color);
 }
 
 
@@ -182,6 +214,47 @@ nav{
     color: var(--dark-color);
 }
 
+/* About */
+
+#portfolio-image {
+    height: 70%;
+}
+
+/* Portfolio */
+#projects {
+    justify-content: space-around;
+}
+
+.project {
+    padding: 24px;
+    background-color: var(--dark-color);
+    border-radius: 24px;
+}
+
+/* Contacts */
+
+.contact-form {
+    width: 40%;
+    padding: 24px;
+    border: 3px solid #3b3b3b;
+    background-color: var(--dark-color);
+    color: var(--light-color);
+}
+
+.submit {
+    background-color: var(--ligth-color);
+    color: var(--dark-color);
+    padding: 20px;
+}
+
+.submit:hover {
+    color: var(--dark-color);
+}
+
+.contact-form::placeholder {
+    font-size: .90rem;
+    font-family: 'Poppins', sans-serif;
+}
 
 @media only screen and (max-width: 997px) {
 
@@ -214,5 +287,13 @@ nav{
 
     .two-columns-disposed-layout {
         grid-template-columns: 1fr;
+    }
+
+    .contact-form {
+        width: 100%;
+    }
+
+    .contact-form::placeholder {
+        font-family: 'Poppins', sans-serif;
     }
 }
