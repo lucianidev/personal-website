@@ -12,6 +12,12 @@ function init() {
   canvas.height = parseInt(
     window.innerHeight - navbar.getBoundingClientRect().height
   );
+
+  const particles = generateParticles();
+  particles.forEach(particle => {
+    particle.draw();
+  });
+
   /*
     calcute the remaining viewport by subtracting the height of the window the height of the navbar
     */
@@ -36,7 +42,7 @@ class Particle {
 const generateParticles = () => {
   const particles = [];
 
-  for (let i = 0; i < 50; i++) {
+  for (let i = 0; i < 150; i++) {
     const particle = new Particle;
     particles.push(particle);
   }
@@ -54,8 +60,9 @@ const update = () => {
   particles.forEach(particle => {
     particle.draw();
   });
-  requestAnimationFrame(update)
 }
 
 init();
+window.onscroll = () => {
 update()
+}
