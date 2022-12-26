@@ -296,4 +296,9 @@ nav{
     .contact-form::placeholder {
         font-family: 'Poppins', sans-serif;
     }
+
+    #about {
+        display: flex;
+        flex-direction: column;
+    }
 }
