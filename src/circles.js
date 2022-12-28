@@ -24,16 +24,20 @@ class Particle {
     this.y = Math.floor(Math.random() * canvas.height);
     this.size = Math.floor(Math.random() * 6);
     this.color = '#FFF';
+    this.speed = Math.random() * (5 - 1) + 1;
   }
 
   draw() {
-    console.log(this.x.toString());
     ctx.beginPath();
-    console.log()
     ctx.arc(this.x, this.y, this.size, 0, 2 * Math.PI);
     ctx.fillStyle = this.color;
     ctx.fill(),
     ctx.stroke();
+  }
+
+  fall() {
+    this.y = this.y += this.speed;
+    this.draw();
   }
 }
 const generateParticles = () => {
@@ -64,7 +68,7 @@ const clear = () => {
 const update = () => {
   clear();
   particles.forEach(particle => {
-    particle.y = particle.y += Math.random() * 4;
+    particle.fall();
     if(particle.y > canvas.height) {
       particle.y = 0;
     }
@@ -73,7 +77,7 @@ const update = () => {
   requestAnimationFrame(update)
 }
 
-
+console.log(particles)
 initializeEffect();
 
 update()
