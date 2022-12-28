@@ -62,7 +62,7 @@ const clear = () => {
 }
 
 const update = () => {
-
+  clear();
   particles.forEach(particle => {
     particle.y = particle.y += Math.random() * 4;
     if(particle.y > canvas.height) {
@@ -70,14 +70,10 @@ const update = () => {
     }
     particle.draw();
   });
+  requestAnimationFrame(update)
 }
 
 
-console.log(canvas.width)
-
 initializeEffect();
 
-setInterval(() => {
-  clear();
-  update();
-}, 1000 / 30)
+update()
